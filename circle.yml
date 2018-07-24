@@ -1,0 +1,9 @@
+test:  
+  override:
+    - "true"
+    
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp -r * webutviklerorg@login.domeneshop.no:/webutvikler.org/
