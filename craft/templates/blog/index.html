@@ -9,13 +9,13 @@ This is the index
 
 {{ entry.blogBody }}
 
-<img src="{{ entry.blogImage }}" />
 
 <h3>{{ entry.blogTitle }}</h3>
 
 {% set image = entry.blogImage.first() %}
 
- {{ image.getUrl() }}
+
+<img src=" {{ image.getUrl() }}" />
 
 
 
