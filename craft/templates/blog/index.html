@@ -13,9 +13,7 @@ This is the index
 <h3>{{ entry.blogTitle }}</h3>
 
 {% for asset in entry.blogImage %}
-
   <img src="{{ asset.url }}" width="{{ asset.getWidth('blogTransform') }}" height="{{ asset.getHeight('blogTransform') }}">
- 
 {% endfor %}
 
 </body>
