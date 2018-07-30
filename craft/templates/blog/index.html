@@ -12,17 +12,13 @@ This is the index
 
 <h3>{{ entry.blogTitle }}</h3>
 
+{% for asset in entry.blogImage %}
 
-{% set assets = entry.blogImage.one() %}
-{% if assets | length %}
-  {% for asset in assets %}
+  {{ asset.url }}
+  {{ asset.getWidth('blogTransform') }}
+  {{ asset.getHeight('blogTransform') }}
 
-    {{ asset.url }}
-    {{ asset.getWidth('blogTransform') }}
-    {{ asset.getHeight('blogTransform') }}
-  {% endfor %}
-{% endif %}
-  
+{% endfor %}  
 
 
 
