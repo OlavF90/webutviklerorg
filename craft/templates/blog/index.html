@@ -13,10 +13,10 @@ This is the index
 <h3>{{ entry.blogTitle }}</h3>
 
 
-{% set assets = entry.blogImage %}
+{% set assets = entry.blogImage.first() %}
 {% if assets | length %}
   {% for asset in assets %}
-    <img src="{{ asset.getUrl() }}" width="{{ asset.getWidth('blogTransform') }}" height="{{ asset.getHeight('blogTransform') }}">
+    <img src="{{ asset.getUrl('blogImage') }}" width="{{ asset.getWidth('blogTransform') }}" height="{{ asset.getHeight('blogTransform') }}">
   {% endfor %}
 {% endif %}
   
