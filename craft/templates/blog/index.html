@@ -13,16 +13,10 @@ This is the index
 
 <h3>{{ entry.blogTitle }}</h3>
 
-{# Fetches the first image #}
 {% set image = entry.blogImage.first() %}
-{# It's good to check if you actually have an image before trying to get the url #}
-{% if image %}
-    {{ image.url }}
-    {# Or alternatively #}
-    {{ image.getUrl() }}
-    {# If you want to get a specific transform: #}
-    {{ image.getUrl('transformHandle') }}
-{% endif %}
+
+ {{ image.getUrl() }}
+
 
 
 </body>
