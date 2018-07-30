@@ -12,7 +12,13 @@ This is the index
 
 <h3>{{ entry.blogTitle }}</h3>
 
-{% set image = entry.blogImage.first() %}
+{% if entry.blogImage | length %}
+  {% for asset in entry.blogImage %}
+    {{ asset.url }}
+  {% endfor %}
+{% endif %}
+  
+  {% set image = entry.blogImage.first() %}
 
 
 <img src=" {{ image.getUrl() }}" />
