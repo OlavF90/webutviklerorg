@@ -17,7 +17,7 @@ This is the index
 {% if assets | length %}
   {% for asset in assets %}
 
-    {{ asset.url() }}
+    {{ asset.url }}
     {{ asset.getWidth('blogTransform') }}
     {{ asset.getHeight('blogTransform') }}
   {% endfor %}
