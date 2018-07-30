@@ -16,7 +16,7 @@ This is the index
 {% set assets = entry.blogImage %}
 {% if assets | length %}
   {% for asset in assets %}
-    <img src="{{ asset.getUrl() }}" width="{{ asset.getWidth('blogTransform') }}" height="{{ asset.getHeight('blogTransform') }}"> />
+    <img src="{{ asset.getUrl() }}" width="{{ asset.getWidth('blogTransform') }}" height="{{ asset.getHeight('blogTransform') }}">
   {% endfor %}
 {% endif %}
   
