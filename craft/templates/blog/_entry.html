@@ -73,7 +73,12 @@
                             
                             <p> {{ entry.url }} {{ currentSite.handle }}
                                 {% set jappy = craft.entries.section('blogChannel').order('postDate') %}
-                                {{ jappy.blogTitle }}
+                                {% for title in jappy %}
+                                    {{ title.title }}
+
+                                {% endfor %}
+
+
 
 
 
