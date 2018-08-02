@@ -70,7 +70,7 @@
                             {% for entry in craft.entries.section('blogChannel').limit(1).all() %}
                             <h3 class="tm-gold-text">{{ entry.blogTitle }}</h3>
                             <p>{{ entry.blogSummary }}</p>
-                            <img src="{{ entry.blogImage }}" alt="Image" class="img-fluid tm-img-post">
+                            <img src="{{ entry.url }}" alt="Image" class="img-fluid tm-img-post">
                             
                             <p>{{ entry.blogBody }}</p>
                             {% endfor %}
