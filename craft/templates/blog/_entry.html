@@ -82,7 +82,6 @@
                             {% endfor %}
                             {% endblock %}
                         </div>
-
                         
                         <div class="row tm-margin-t-big">
                             {% for entry in craft.entries.section('blogChannel').limit(3).orderBy('postDate desc').all() %}
@@ -95,10 +94,8 @@
                                     </a>
                                     {% endfor %}
                                     <h4 class="tm-margin-b-20 tm-gold-text">{{ entry.blogTitle }}</h4>
-                                    <p class="tm-margin-b-20"> {{ entry.blogSummary }}</p>
-                                       
-                                </div>
-                            
+                                    <p class="tm-margin-b-20"> {{ entry.blogSummary }}</p>                   
+                                </div>                            
                             </div>
                             {% endfor %}
                         </div>
@@ -113,6 +110,7 @@
                             {% endfor %}
                         </div>                        
                     </div>
+                </div> <!-- Row -->
 
 
                     <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 tm-aside-r">
