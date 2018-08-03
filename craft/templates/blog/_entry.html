@@ -71,10 +71,12 @@
                         <div class="tm-blog-post">
                             {% block main %}
                             {% for entry in craft.entries.section('blogChannel').limit(1).all() %}
-                            <h3 class="tm-gold-text">{{ entry.blogTitle }}</h3>
+                            <a href="{{ entry.url }}"><h3 class="tm-gold-text">{{ entry.blogTitle }}</h3></a>
                             <p>{{ entry.blogSummary }}</p>
                             {% for asset in entry.blogImage.all() %}
-                            <img src="{{ asset.url }}" alt="Image" class="img-fluid tm-img-post">
+                            <a href="{{ entry.url }}">
+                                <img src="{{ asset.url }}" alt="Image" class="img-fluid tm-img-post">
+                            </a>
                             {% endfor %}
                             <p>{{ entry.blogBody }}</p>
                             {% endfor %}
