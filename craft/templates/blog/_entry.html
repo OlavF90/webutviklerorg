@@ -96,14 +96,22 @@
                                     {% endfor %}
                                     <h4 class="tm-margin-b-20 tm-gold-text">{{ entry.blogTitle }}</h4>
                                     <p class="tm-margin-b-20"> {{ entry.blogSummary }}</p>
-                                    <a href="{{ entry.url }}" class="tm-btn text-uppercase">Read More</a>    
+                                       
                                 </div>
                             
                             </div>
                             {% endfor %}
-
                         </div>
-                        
+
+                        <div class="row tm-margin-t-big">
+                            {% for entry in craft.entries.section('blogChannel').limit(3).orderBy('postDate desc').all() %}
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <div class="tm-content-box">
+                                    <a href="{{ entry.url }}" class="tm-btn text-uppercase">Read More</a> 
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>                        
                     </div>
 
 
