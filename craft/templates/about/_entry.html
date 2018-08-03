@@ -128,13 +128,22 @@
                             </a>
                             {% endfor %}
                             <h4 class="tm-margin-b-20 tm-gold-text">{{ entry.blogTitle }}</h4>
-                            <p class="tm-margin-b-20"> {{ entry.blogSummary }}</p>
-                            <a href="{{ entry.url }}" class="tm-btn text-uppercase">Read More</a>     
+                            <p class="tm-margin-b-20"> {{ entry.blogSummary }}</p>   
                         </div>  
                     </div>
                     {% endfor %}
                 </div> <!-- row -->
+                <div class="row">
+                    {% for entry in craft.entries.section('blogChannel').limit(4).orderBy('postDate desc').all() %}
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                        <div class="tm-content-box">
+                            <a href="{{ entry.url }}" class="tm-btn text-uppercase">Read More</a> 
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>  
             </div>
+
         </section>
         
         <footer class="tm-footer">
