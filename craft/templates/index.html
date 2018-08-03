@@ -75,9 +75,9 @@
 
                         <div class="tm-content-box">
                             {% for asset in entry.blogImage.all() %}
-                            <img src="{{ asset.url }}" height="{{ asset.getHeight('blogPreview') }}" width="{{ asset.getWidth('blogPreview') }}" alt="Image" class="tm-margin-b-20">
+                            <img src="{{ asset.url }}" height="{{ asset.getHeight('blogPreview') }}" width="{{ asset.getWidth('blogPreview') }}" alt="Image" href="{{ entry.url }}" class="tm-margin-b-20">
                             {% endfor %}
-                            <h4 href="{{ entry.url }} class="tm-margin-b-20 tm-gold-text"> {{entry.blogTitle }}</h4>
+                            <h4 class="tm-margin-b-20 tm-gold-text">{{entry.blogTitle }}</h4>
                             <p class="tm-margin-b-20">{{ entry.blogSummary }}</p>
                             <a href="{{ entry.url }}" class="tm-btn text-uppercase">Read More</a>    
                         </div>  
