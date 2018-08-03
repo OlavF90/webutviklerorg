@@ -74,7 +74,9 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
 
                         <div class="tm-content-box">
-                            <img src="https://www.webutvikler.org/craft/web/storage/images/tm-img-310x180-1.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
+                            {% for asset in entry.blogImage.all() %}
+                            <img src="{{ asset.url }}" height="{{ asset.getHeight('blogPreview') }}" width="{{ asset.getWidth('blogPreview') }}" alt="Image" class="tm-margin-b-20 img-fluid">
+                            {% endfor %}
                             <h4 class="tm-margin-b-20 tm-gold-text"> {{entry.blogTitle }}</h4>
                             <p class="tm-margin-b-20">{{ entry.blogSummary }}</p>
                             <a href="#" class="tm-btn text-uppercase">Read More</a>    
