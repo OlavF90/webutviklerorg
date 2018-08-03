@@ -69,6 +69,7 @@
                         <p class="tm-subtitle">{{ entry.introductionBody }}</p>
                     </div>
                 </div>
+
                 <div class="row">
                     {% for entry in craft.entries.section('blogChannel').limit(3).orderBy('postDate desc').all() %}
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -84,6 +85,8 @@
                         
                     </div>
                     {% endfor %}
+                    <br>
+
 
                 <div class="row tm-margin-t-big">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
