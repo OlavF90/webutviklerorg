@@ -1,4 +1,12 @@
 {% extends "blog/_entry.html" %}
 
 {% block main %}
+
+    <h3 class="tm-gold-text">{{ entry.blogTitle }}</h3>
+    <p>{{ entry.blogSummary }}</p>
+    {% for asset in entry.blogImage.all() %}
+    <img src="{{ asset.url }}" alt="Image" class="img-fluid tm-img-post">
+    {% endfor %}
+    <p>{{ entry.blogBody }}</p>
+
 {% endblock %}
